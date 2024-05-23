@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+
+        </div>
+        <div class="main-content">
+            <div class="messages" id="messages">
+                
+                <div class="message">
+                    <div class="avatar"><img src="avatar.png" alt="Avatar"></div>
+                </div>
+            </div>
+            <div class="message-input" id="message-input">
+                <input type="text" id="user-input" placeholder="Type your answer..." onkeypress="handleKeyPress(event)">
+                <button class="animated-button" type="button" onclick="nextQuestion()">
+                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                    </svg>
+                    <span class="text">Send</span>
+                    <span class="circle"></span>
+                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <form id="recommendationsForm" action="get_recommendations.php" method="post" style="display: none;">
+        <input type="hidden" id="hiddenLocation" name="location">
+        <input type="hidden" id="hiddenCuisine" name="cuisine">
+        <input type="hidden" id="hiddenDiet" name="diet">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

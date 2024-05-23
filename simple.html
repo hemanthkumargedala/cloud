@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Recommendations</title>
+</head>
+<body>
+    <form action="get_recommendations.php" method="post">
+        <label for="location">What is your location?</label>
+        <input type="text" id="location" name="location" required><br>
+
+        <label for="cuisine">What type of cuisine are you in the mood for? (e.g., Italian, Chinese, etc.)</label>
+        <input type="text" id="cuisine" name="cuisine" required><br>
+
+        <label for="diet">Are you looking for vegetarian or non-vegetarian options?</label>
+        <input type="text" id="diet" name="diet" required><br>
+
+        <button type="submit">Get Recommendations</button>
+    </form>
+</body>
+</html>
